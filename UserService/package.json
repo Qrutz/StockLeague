@@ -1,0 +1,38 @@
+{
+  "name": "userservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "db:generate": "drizzle-kit generate:mysql",
+    "db:push": "drizzle-kit push:mysql",
+    "dev": "concurrently \"npx tsc --skipLibCheck --watch\" \"nodemon --delay 2 -q dist/src/app.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "drizzle-kit": "^0.20.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.2",
+    "axios": "^1.6.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.1",
+    "express": "^4.18.2",
+    "express-http-proxy": "^2.0.0",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "localtunnel": "^2.0.2",
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.2",
+    "svix": "^1.15.0"
+  }
+}
