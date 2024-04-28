@@ -1,0 +1,11 @@
+.active-tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 70%; 
+    height: 2px;
+    border-radius: 50% 50% 0 0;
+    background-color: theme("colors.slate.500");
+  }

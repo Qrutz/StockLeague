@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 -160 1700 1250" style="enable-background:new 0 0 1300 1300;" xml:space="preserve">
+<g transform="scale(1.2)">
+	<g>  <g>
+            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="653.2424" y1="518.3453" x2="1011.127" y2="518.3453">
+                <stop offset="0" style="stop-color:#D1D5DB"/>
+                <stop offset="0.6228" style="stop-color:#D1D5DB"/>
+                <stop offset="1" style="stop-color:#D1D5DB"/>
+            </linearGradient>
+            <polygon style="fill:url(#SVGID_1_);" points="653.242,487.575 653.242,208.408 1011.127,828.282 849.95,828.282"/>
+            
+                <linearGradient id="SVGID_00000150075921128841524510000015397556502894947487_" gradientUnits="userSpaceOnUse" x1="295.3578" y1="518.3453" x2="653.2424" y2="518.3453">
+                <stop offset="0" style="stop-color:#64748b"/>
+                <stop offset="0.6228" style="stop-color:#cbd5e1"/>
+                <stop offset="1" style="stop-color:#f8fafc"/>
+            </linearGradient>
+            <polygon style="fill:url(#SVGID_00000150075921128841524510000015397556502894947487_);" points="456.535,828.282 
+                295.358,828.282 653.242,208.408 653.242,487.575"/>
+            
+                <linearGradient id="SVGID_00000171713267644634881480000015542426786840726665_" gradientUnits="userSpaceOnUse" x1="653.2424" y1="828.2824" x2="653.2424" y2="606.4296">
+                <stop offset="0" style="stop-color:#64748b"/>
+                <stop offset="0.6228" style="stop-color:#cbd5e1"/>
+                <stop offset="1" style="stop-color:#f8fafc"/>
+            </linearGradient>
+            <polygon style="fill:url(#SVGID_00000171713267644634881480000015542426786840726665_);" points="653.242,697.692 
+                577.846,828.282 653.242,828.282 728.639,828.282"/>
+        </g>
+		<g>
+			
+				<linearGradient id="SVGID_00000061464627078915301700000017398913219798898612_" gradientUnits="userSpaceOnUse" x1="824.3408" y1="705.8445" x2="1017.4476" y2="817.3348">
+				<stop  offset="0" style="stop-color:#94a3b8"/>
+				<stop  offset="0.3772" style="stop-color:#94a3b8"/>
+				<stop  offset="1" style="stop-color:#f8fafc"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000061464627078915301700000017398913219798898612_);" d="M905.256,644.909
+				c-25.767,41.185-61.335,75.606-103.455,99.977l48.149,83.397h161.177L905.256,644.909z"/>
+			
+				<linearGradient id="SVGID_00000109713928832714989670000010174404252270422696_" gradientUnits="userSpaceOnUse" x1="357.5183" y1="860.2006" x2="469.2037" y2="666.7559">
+				<stop  offset="0" style="stop-color:#94a3b8"/>
+				<stop  offset="0.6228" style="stop-color:#94a3b8"/>
+				<stop  offset="1" style="stop-color:#f8fafc"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000109713928832714989670000010174404252270422696_);" d="M401.229,644.909L295.358,828.282
+				h161.177l48.149-83.397C462.564,720.514,426.995,686.094,401.229,644.909z"/>
+			
+				<linearGradient id="SVGID_00000105418358697920167430000003441450762872507779_" gradientUnits="userSpaceOnUse" x1="653.2424" y1="780.7757" x2="653.2424" y2="828.2824">
+				<stop  offset="0" style="stop-color:#94a3b8"/>
+				<stop  offset="0.3772" style="stop-color:#94a3b8"/>
+				<stop  offset="1" style="stop-color:#f8fafc"/>
+			</linearGradient>
+			<path style="fill:url(#SVGID_00000105418358697920167430000003441450762872507779_);" d="M605.274,780.776l-27.428,47.507h75.396
+				h75.396l-27.428-47.507c-15.617,2.536-31.635,3.875-47.968,3.875C636.909,784.65,620.891,783.311,605.274,780.776z"/>
+		</g>
+			<g>
+				
+					<rect x="757.983" y="459.107" transform="matrix(0.866 -0.5 0.5 0.866 -224.043 467.0384)" style="fill:#103C4F;" width="3" height="384.962"/>
+				
+					<rect x="827.025" y="201.441" transform="matrix(0.866 -0.5 0.5 0.866 -155.0015 485.5381)" style="fill:#103C4F;" width="3" height="661.128"/>
+				
+					<rect x="147.396" y="530.505" transform="matrix(0.5 -0.866 0.866 0.5 -221.7495 679.9312)" style="fill:#103C4F;" width="661.128" height="3"/>
+				
+					<rect x="354.521" y="650.089" transform="matrix(0.5001 -0.866 0.866 0.5001 -290.8007 799.4594)" style="fill:#103C4F;" width="384.962" height="3"/>
+			</g>
+	</g>
+	
+	
+</g>
+</svg>
