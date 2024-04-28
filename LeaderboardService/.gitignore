@@ -1,0 +1,8 @@
+node_modules
+npm-cache --global
+.env
+package-lock.json
+
+src/db/migrations
+
+dist
