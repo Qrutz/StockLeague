@@ -1,0 +1,103 @@
+async function setRedisValue(key: RedisKey, value: RedisValue) {
+  try {
+    await redisClient.set(key, value);
+  } catch (error) {
+    console.error('Error setting valuse in Redis:', error);
+  }
+}
+
+async function getRedisValue(key: RedisKey) {
+  try {
+    return await redisClient.get(key);
+  } catch (error) {
+    console.error('Error getting value from Redis:', error);
+  }
+}
+
+async function fetchStockPrice(ticker: string) {
+  // Logic to fetch stock price for the given ticker
+  // This could involve calling an external API
+  const apikey = process.env.FMP_API_KEY;
+  const url = `https://financialmodelingprep.com/api/v3/quote-short/${ticker}?apikey=${apikey}`;
+  const response = await axios.get(url).then((res) => res.data);
+
+  const price = response[0].price;
+
+  console.log('Stock price for', ticker, 'is', price);
+
+  return price;
+}
+
+function addCurrentStockPrice(post: Post, stockPrice: number) {
+  post.currentStockPrice = stockPrice;
+  return post;
+}
+
+function calculateAccuracy(post: Post, actualPrice: number) {
+  const predictedMovement = post.predictedMovement;
+  const priceAtGuess = post.priceAtGuess;
+  const actualMovement = ((actualPrice - priceAtGuess) / priceAtGuess) * 100;
+
+  let accuracy = 0;
+  // If the predicted and actual movement have opposite signs, return 0% accuracy.
+  if (
+    (predictedMovement < 0 && actualMovement > 0) ||
+    (predictedMovement > 0 && actualMovement < 0)
+  ) {
+    accuracy = 0;
+  }
+  // If predicted movement is greater than or equal to the actual movement, use the first formula
+  else if (Math.abs(predictedMovement) >= Math.abs(actualMovement)) {
+    accuracy = (Math.abs(actualMovement) / Math.abs(predictedMovement)) * 100;
+  }
+  // If predicted movement is less than the actual movement, use the second formula
+  else {
+    accuracy = (Math.abs(predictedMovement) / Math.abs(actualMovement)) * 100;
+  }
+
+  // append accuracy to post
+  post.accuracy = accuracy;
+
+  return post;
+}
+
+function calculateDaysLeft(post: Post) {
+  const dateAtGuess = new Date(post.dateAtGuess);
+  const dateAtFinal = new Date(post.dateAtFinal);
+  const daysLeft =
+    (dateAtFinal.getTime() - dateAtGuess.getTime()) / (1000 * 3600 * 24);
+
+  post.daysLeftUntilFinal = daysLeft;
+
+  return post;
+}
+
+function addStockMovementPercentage(post: Post, stockPrice: number) {
+  const currentPrice = stockPrice;
+  const priceAtGuess = post.priceAtGuess;
+
+  console.log('currentPrice', currentPrice);
+  console.log('priceAtGuess', priceAtGuess);
+
+  // Calculate how much the stock price has moved since the guess and return the percentage appended to the post
+  const movement = ((currentPrice - priceAtGuess) / priceAtGuess) * 100;
+  post.stockMovementPercentage = movement;
+
+  return post;
+}
+
+async function addPosterToPost(post: Post) {
+  const userId = post.userId;
+  const user = await clerkClient.users.getUser(userId);
+
+  // we only want id, imageUrl, firstName, lastName, username
+  post.poster = {
+    id: user.id,
+    imageUrl: user.imageUrl,
+    firstName: user.firstName,
+    lastName: user.lastName,
+    username: user.username,
+  };
+
+  return post;
+}

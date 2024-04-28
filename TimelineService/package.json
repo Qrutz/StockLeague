@@ -1,0 +1,42 @@
+{
+  "name": "aktieligantimelineservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "start": "node dist/app.js",
+    "db:generate": "drizzle-kit generate:mysql",
+    "db:push": "drizzle-kit push:mysql",
+    "dev": "concurrently \"npx tsc --skipLibCheck --watch\" \"nodemon -q dist/src/app.js\"",
+    "devTest": "nodemon src/app.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "drizzle-kit": "^0.20.7",
+    "prisma": "^5.10.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@clerk/clerk-sdk-node": "^4.13.2",
+    "@prisma/client": "^5.10.2",
+    "@supabase/supabase-js": "^2.39.1",
+    "axios": "^1.6.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.1",
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "ioredis": "^5.3.2",
+    "kafkajs": "^2.2.4",
+    "mysql2": "^3.6.5",
+    "nodemon": "^3.0.2",
+    "pusher": "^5.2.0"
+  }
+}
